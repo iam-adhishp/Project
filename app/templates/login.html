@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOMMERCE</title>
+    {% load static %}
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/grocery-store.png' %}" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #7d31ce 0%, #70ddd2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .login-container h2 {
+            font-weight: bold;
+            color: #2575fc;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #2575fc;
+            border: none;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #6a11cb;
+        }
+
+        .alert {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2 class="text-center">LOGIN</h2>
+
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-danger text-center mt-3">{{ message }}</div>
+        {% endfor %}
+        {% endif %}
+
+        <form method="POST" class="mt-4">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">USERNAME</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">PASSWORD</label>
+                <input type="password" class="form-control" id="password" name="password"
+                    placeholder="Enter your password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" style="margin-bottom: 10px;">LOGIN</button>
+        </form>
+        <div class="blogin">
+            <center>
+                <a href="{% url 'signup' %}" class="btn-login" style="text-decoration: none;">SignUp</a>
+            </center>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

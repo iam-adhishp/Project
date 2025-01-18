@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service</title>
+    {% load static %}
+    <!-- fevicon -->
+    <link rel="icon" href="{% static 'images/grocery-store.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1> CUSTOMER SERVICE PORTAL </h1>
+        <nav>
+            <a href="{% url 'home' %}">HOME</a>
+            <a href="{% url 'create_ticket' %}">CREATE TICKET</a>
+            <a href="{% url 'cs' %}">BACK</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+
+</html>

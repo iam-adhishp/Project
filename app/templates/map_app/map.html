@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Styled Map</title>
+    {% load static %}
+    <!-- fevicon -->
+    <link rel="icon" href="{% static 'images/grocery-store.png' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #1e3c72, #1e3c72);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        #map {
+            height: 500px;
+            width: 80%;
+            margin: 20px auto;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .leaflet-popup-content {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .leaflet-popup-tip {
+            background-color: white;
+        }
+
+        .leaflet-popup-content-wrapper {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Map View</h1>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        }).addTo(map);
+
+        // L.marker([51.505, -0.09]).addTo(map)
+        //     .bindPopup('A pretty marker.<br> Easily customizable.')
+        //     .openPopup();
+    </script>
+
+<button class="btn" type="button" class="btn btn-primary" style="color: black; border-radius: 5px 5px 5px 5px;">
+    <a href="{% url 'home' %}">
+        HOME
+    </a>
+</button>
+</body>
+
+</html>

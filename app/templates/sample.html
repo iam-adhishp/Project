@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOMMERCE</title>
+    {% load static %}
+    <!-- fevicon -->
+    <link rel="icon" href="{% static 'images/grocery-store.png' %}" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #6a11cb);
+            color: #fff;
+        }
+
+        h1 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .eco {
+            font-size: 3em;
+            color: #ffda79;
+            text-transform: uppercase;
+        }
+
+        .btn-login {
+            margin-right: 10px;
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-login:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .blogin {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .sam {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .sam img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .sam img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        center {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1 class="eco"><b>WELCOME TO ECOMMERCE</b></h1>
+        <h1><b>HOME PAGE</b></h1>
+    </center>
+
+    <div class="blogin">
+        <a href="{% url 'login' %}" class="btn-login">LET'S BEGIN</a>
+    </div>
+
+    <div class="sam">
+        <img src="{% static 'images/ecommerce3.jpg' %}" alt="sample">
+    </div>
+</body>
+
+</html>

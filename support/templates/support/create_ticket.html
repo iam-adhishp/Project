@@ -1,0 +1,32 @@
+
+{% extends 'support/base.html' %}
+{% block content %}
+<center>
+    <div class="ticket-form-container">
+        <h2>Create a Ticket</h2>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>{{ form.customer_name.label }}</td>
+                    <td>{{ form.customer_name }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.email.label }}</td>
+                    <td>{{ form.email }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.subject.label }}</td>
+                    <td>{{ form.subject }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.description.label }}</td>
+                    <td>{{ form.description }}</td>
+                </tr>
+            </table>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</center>
+{% endblock %}
+

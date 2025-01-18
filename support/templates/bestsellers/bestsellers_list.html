@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>ECOMMERCE</title>
+    <!-- fevicon -->
+    <link rel="icon" href="{% static 'images/grocery-store.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+    <center>
+        <h1>BEST SELLER INFORMATION</h1>
+    </center>
+    <div class="bestseller-list">
+        {% for bestseller in bestsellers %}
+        <div class="bestseller-item">
+            <h2>{{ bestseller.title }}</h2>
+            <p style="text-align: justify;"><strong>Description:</strong> {{ bestseller.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <center>
+        <button class="btn" type="button" class="btn btn-primary" style="margin-top: 10px; border: none;">
+            <a href="{% url 'home' %}">
+                HOME
+            </a>
+        </button>
+    </center>
+    <style>
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        body {
+            background: linear-gradient(to right, #f7f8fc, #e2e6ef);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #4a90e2;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .bestseller-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .bestseller-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .bestseller-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .bestseller-item h2 {
+            font-size: 1.5rem;
+            color: #4a90e2;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .bestseller-item p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .bestseller-item p strong {
+            color: #333;
+            font-weight: 500;
+        }
+
+        .btn a {
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .bestseller-list {
+                grid-template-columns: 1fr;
+            }
+
+            .bestseller-item {
+                padding: 15px;
+            }
+        }
+    </style>
+</body>
+
+</html>

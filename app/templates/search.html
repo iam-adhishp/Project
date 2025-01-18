@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCH</title>
+    {% load static %}
+    <!-- fevicon -->
+    <link rel="icon" href="{% static 'images/grocery-store.png' %}" type="image/x-icon" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #024b47;
+            color: white;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        form {
+            margin: 20px auto;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f30808;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        li {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            color: #555;
+            font-style: italic;
+        }
+
+        #results {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        ::placeholder {
+            color: #aaa;
+        }
+
+        datalist {
+            display: none;
+        }
+
+        .btn a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SEARCH HERE</h1>
+    <form method="get" action="{% url 'search' %}">
+        <input type="text" name="q" placeholder="Search..." value="{{ query }}" list="suggestions">
+        <datalist id="suggestions"></datalist>
+        <button type="submit">Search</button>
+    </form>
+    {% if results %}
+    <ul id="results">
+        {% for item in results %}
+        <li><strong>{{ item.name }}</strong>: {{ item.description }}</li>
+        <img src="/media/{{ item.image1 }}" alt="{{ item.name }}" style="max-width: 200px; max-height: 200px;">
+        <img src="/media/{{ item.image2 }}" alt="{{ item.name }}" style="max-width: 200px; max-height: 200px;">
+        <img src="/media/{{ item.image3 }}" alt="{{ item.name }}" style="max-width: 200px; max-height: 200px;">
+        <img src="/media/{{ item.image4 }}" alt="{{ item.name }}" style="max-width: 200px; max-height: 200px;">
+        <img src="/media/{{ item.image5 }}" alt="{{ item.name }}" style="max-width: 200px; max-height: 200px;">
+        <img src="/media/{{ item.image6 }}" alt="{{ item.name }}" style="max-width: 200px; max-height: 200px;">
+        {% endfor %}
+    </ul>
+    {% elif query %}
+    <p>No results found for "{{ query }}".</p>
+    {% endif %}
+
+    <button class="btn" type="button" class="btn btn-primary" style="color: black; background-color: white;">
+        <a href="{% url 'home' %}">
+            HOME
+        </a>
+    </button>
+
+    <!-- pop up message -->
+    <!-- <script>
+        const searchInput = document.querySelector('input[name="q"]');
+        searchInput.addEventListener('input', function () {
+            const query = this.value;
+            fetch(`/search/?q=${query}`)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('#results').innerHTML = data;
+                });
+        });
+        searchInput.addEventListener('input', function () {
+            const query = this.value;
+            fetch(`/autocomplete/?q=${query}`)
+                .then(response => response.json())
+                .then(data => {
+                    const suggestions = data.map(item => `<option value="${item.name}">`);
+                    document.querySelector('#suggestions').innerHTML = suggestions.join('');
+                });
+        });
+    </script> -->
+
+</body>
+
+</html>

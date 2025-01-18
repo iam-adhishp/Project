@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOMMERCE</title>
+    {% load static %}
+    <!-- favicon -->
+    <link rel="icon" href="{% static 'images/grocery-store.png' %}" type="image/x-icon" />
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Hero Section */
+        .hero {
+            color: black;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            color: #333;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="hero">
+            <h1>Experience Virtual Try-On</h1>
+            <p>See how your favorite items look on you before you buy.</p>
+            <a href="#" class="cta-button">
+                TRY NOW
+            </a>
+        </div>
+    </header>
+</body>
+
+</html>

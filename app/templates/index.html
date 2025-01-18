@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>ECOMMERCE</title>
+   {% load static %}
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+   <!-- style css -->
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+   <!-- fevicon -->
+   <link rel="icon" href="{% static 'images/grocery-store.png' %}" type="image/x-icon" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+   <!-- fonts -->
+   <link href="{% static 'https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap' %}" rel="stylesheet">
+   <!-- font awesome -->
+   <link rel="stylesheet" type="text/css"
+      href="{% static '' %}https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!--  -->
+   <!-- owl stylesheets -->
+   <link
+      href="{% static 'https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext' %}"
+      rel="stylesheet">
+   <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+   <link rel="stylesoeet" href="{% static 'css/owl.theme.default.min.css' %}">
+   <link rel="stylesheet"
+      href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %}"
+      media="screen">
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+   <script src="{% static 'js/index.js' %}"></script>
+</head>
+
+<body>
+   <!-- banner bg main start -->
+   <div class="banner_bg_main">
+      <!-- header top section start -->
+      <div class="container">
+         <div class="header_section_top">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="custom_menu">
+                     <ul>
+                        <li><a href="{% url 'sell' %}">BEST SELLERS</a></li>
+                        <li><a href="{% url 'home' %}">GIFT IDEAS</a></li>
+                        <li><a href="{% url 'home' %}">NEW RELEASES</a></li>
+                        <li><a href="{% url 'home' %}">TODAYS DEALS</a></li>
+                        <li><a href="{% url 'cs' %}">CUSTOMER SERVICE</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- header top section start -->
+      <!-- logo section start -->
+      <div class="logo_section">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="logo">
+                     <h4><b>ECOMMERCE</b></h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- logo section end -->
+      <!-- header section start -->
+      <div class="header_section">
+         <div class="container">
+            <div class="containt_main">
+               <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a href="{% url 'home' %}">HOME</a>
+                  <a href="{% url 'fashion' %}">FASHION</a>
+                  <a href="{% url 'cs' %}">SERVICE</a>
+                  <a href="{% url 'sell' %}">SELLERS</a>
+                  <a href="{% url 'try' %}">TRY ON</a>
+                  <a href="https://www.shopar.ai/collection/glasses?product=65e5a9275d759cd6d9458b97&mode=ar">AR
+                     GLASS</a>
+                  <a href="{% url 'wish' %}">WISH LIST</a>
+                  <a href="https://open.spotify.com/">MUSIC</a>
+                  <a href="{% url 'map' %}">LOCATION</a>
+                  <a href="{% url 'login' %}">LOGOUT</a>
+               </div>
+               <span class="toggle_icon" onclick="openNav()"><img src="{% static 'images/toggle-icon.png' %}"></span>
+               <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CATAGORY
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                     <a class="dropdown-item dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ITEMS</a>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" aria-labelledby="dropdownMenuButton"
+                           href="{% url 'fashion' %}">MENS</a>
+                        <a class="dropdown-item" aria-labelledby="dropdownMenuButton"
+                           href="{% url 'fashion' %}">WOMENS</a>
+                        <a class="dropdown-item" aria-labelledby="dropdownMenuButton"
+                           href="{% url 'fashion' %}">KIDS</a>
+                        <a class="dropdown-item" aria-labelledby="dropdownMenuButton"
+                           href="{% url 'fashion' %}">WATCH</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="main">
+                  <!-- Another variation with a button -->
+                  <div class="input-group">
+
+                     <!-- SEARCH BAR -->
+                     <table>
+                        <form method="get">
+                           <tr>
+                              <td>
+                                 <input type="text" placeholder="Search Here" style="width: 600px; height: 37px;">
+                              </td>
+                              <td>
+                                 <button type="submit" style="border-radius: 3px 3px 3px 3px !important; height: 35px;">
+                                    <span class="material-symbols-outlined">
+                                       <a href="{% url 'search' %}">search</a>
+                                    </span>
+                                 </button>
+                              </td>
+                           </tr>
+                        </form>
+                     </table>
+                     {% if results %}
+                     <h2>Results:</h2>
+                     <ul>
+                        {% for item in results %}
+                        <li>{{ item.name }}: {{ item.description }}</li>
+                        {% endfor %}
+                     </ul>
+                     {% elif query %}
+                     <p>No results found for "{{ query }}".</p>
+                     {% endif %}
+                     <div class="input-group-append"></div>
+
+                  </div>
+               </div>
+               <div class="header_box">
+                  <div class="login_menu">
+                     <ul>
+                        <li><a href="{% url 'wish' %}">
+                              <span class="padding_10">WISH LIST</span></a>
+                        </li>
+                        <li><a href="{% url 'login' %}">
+                              <span class="padding_10">LOGOUT</span></a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- header section end -->
+      <!-- banner section start -->
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="banner_taital">Get Start <br>Your favourite shopping</h1>
+                  <div class="buynow_bt"><a href="{% url 'wish' %}">TRY ON</a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- banner section end -->
+
+   <!-- fashion section start -->
+
+   <style>
+      .fashion_section {
+         padding: 10px 0;
+         text-align: center;
+         background: linear-gradient(135deg, #e0e0e0, #ffffff);
+         perspective: 1000px;
+      }
+
+      .fashion_taital {
+         font-size: 3rem;
+         color: #333;
+         margin-bottom: 30px;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         font-weight: bold;
+      }
+
+      .row {
+         display: flex;
+         justify-content: center;
+         margin-top: 20px;
+      }
+
+      .box_main:hover {
+         transform: rotateY(10deg) scale(1.05);
+         box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .tshirt_img img {
+         width: 100%;
+         height: auto;
+         display: block;
+      }
+
+      .tshirt_img {
+         padding: 5px;
+         transform: translateZ(30px);
+         position: relative;
+         transition: transform 0.5s;
+      }
+
+      .box_main:hover .tshirt_img {
+         transform: translateZ(40px) scale(1.1);
+      }
+   </style>
+
+   <div class="fashion_section">
+      <div class="container">
+         <h1 class="fashion_taital"><b>FASHIONS</b></h1>
+         <div class="fashion_section_2">
+            <div class="row">
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <div class="tshirt_img">
+                        <img src="{% static 'images/mens/shrt.jpg' %}" alt="Shirt">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <div class="tshirt_img">
+                        <img src="{% static 'images/mens/kids.jpg' %}" alt="Kids Wear">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <div class="tshirt_img">
+                        <img src="{% static 'images/mens/tshirt.jpg' %}" alt="T-Shirt">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- fashion section end -->
+
+   <!-- Javascript files-->
+   <script src="{% static 'js/jquery.min.js' %}"></script>
+   <script src="{% static 'js/popper.min.js' %}"></script>
+   <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+   <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+   <script src="{% static 'js/plugin.js' %}"></script>
+   <!-- sidebar -->
+   <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+   <script src="{% static 'js/custom.js' %}"></script>
+
+   <!-- <script>
+      const searchInput = document.querySelector('input[name="q"]');
+      searchInput.addEventListener('input', function () {
+         const query = this.value;
+         fetch(`/search/?q=${query}`)
+            .then(response => response.text())
+            .then(data => {
+               document.querySelector('#results').innerHTML = data;
+            });
+      });
+      document.querySelector('input[name="q"]').addEventListener('input', function () {
+         const query = this.value;
+         fetch(`/autocomplete/?q=${query}`)
+            .then(response => response.json())
+            .then(data => {
+               const suggestions = data.map(item => `<option value="${item.name}">`);
+               document.querySelector('#suggestions').innerHTML = suggestions.join('');
+            });
+      });
+   </script> -->
+</body>
+
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>ECOMMERCE</title>
+   {% load static %}
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+   <!-- style css -->
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+   <!-- fevicon -->
+   <link rel="icon" href="{% static 'images/grocery-store.png' %}" type="image/x-icon" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+   <!-- fonts -->
+   <link href="{% static 'https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap' %}" rel="stylesheet">
+   <!-- font awesome -->
+   <link rel="stylesheet" type="text/css"
+      href="{% static '' %}https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!--  -->
+   <!-- owl stylesheets -->
+   <link
+      href="{% static 'https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext' %}"
+      rel="stylesheet">
+   <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+   <link rel="stylesoeet" href="{% static 'css/owl.theme.default.min.css' %}">
+   <link rel="stylesheet"
+      href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %}"
+      media="screen">
+</head>
+
+<body>
+
+   <!-- fashion section start -->
+
+   <h1 class="fashion_taital"><b>FASHION SECTION</b></h1>
+   <div class="container">
+      <div class="header_section_top">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="custom_menu">
+                  <ul>
+                     <li><a href="{% url 'sell' %}">BEST SELLERS</a></li>
+                     <li><a href="{% url 'home' %}">NEW RELEASES</a></li>
+                     <li><a href="{% url 'home' %}">TODAYS DEALS</a></li>
+                     <li><a href="{% url 'home' %}">HOME PAGE</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <style>
+      .box_main:hover {
+         transform: rotateY(10deg) scale(1.05);
+         box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .tshirt_img img {
+         width: 100%;
+         height: auto;
+         display: block;
+      }
+
+      .tshirt_img {
+         padding: 5px;
+         transform: translateZ(30px);
+         position: relative;
+         transition: transform 0.5s;
+      }
+
+      .box_main:hover .tshirt_img {
+         transform: translateZ(40px) scale(1.1);
+      }
+   </style>
+   <div class="fashion_section">
+      <div class="container">
+         <div class="fashion_section_2">
+            <h1 class="fashion_taital"><b>MENS</b></h1>
+            <div class="row">
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>SHIRT</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/mens/shrt.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>SHIRT</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/mens/tshirt.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>SHIRT</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/mens/kids.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>SHIRT</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/mens/shirt5.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>SHIRT</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/mens/shirt4.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>SHIRT</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/mens/shirt6.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="container">
+                  <div class="header_section_top">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="custom_menu">
+                              <ul>
+                                 <li><a href="{% url 'sell' %}">BEST SELLERS</a></li>
+                                 <li><a href="{% url 'home' %}">NEW RELEASES</a></li>
+                                 <li><a href="{% url 'home' %}">TODAYS DEALS</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <h1 class="fashion_taital"><b>WOMENS</b></h1>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>MIDI</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/womens/midi1.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>MIDI</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/womens/midi.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>SKIRT</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/womens/skirt.webp' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>SLEEVES</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/womens/sleeve.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>SKIRT</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/womens/women.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>TOP</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/womens/wmn6.webp' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="container">
+                  <div class="header_section_top">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="custom_menu">
+                              <ul>
+                                 <li><a href="{% url 'sell' %}">BEST SELLERS</a></li>
+                                 <li><a href="{% url 'home' %}">NEW RELEASES</a></li>
+                                 <li><a href="{% url 'home' %}">TODAYS DEALS</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <h1 class="fashion_taital"><b>KIDS</b></h1>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>FORK</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/kids/kids1.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>FORK</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/kids/kids3.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>FORK</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/kids/kids5.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>KIDS</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/kids/kids2.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>FORK</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/kids/kids4.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>FORK</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/kids/kids6.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="container">
+                  <div class="header_section_top">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="custom_menu">
+                              <ul>
+                                 <li><a href="{% url 'sell' %}">BEST SELLERS</a></li>
+                                 <li><a href="{% url 'home' %}">NEW RELEASES</a></li>
+                                 <li><a href="{% url 'home' %}">TODAYS DEALS</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <h1 class="fashion_taital"><b>ELECTRONICS</b></h1>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>WATCH</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/electronics/watch1.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>WATCH</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/electronics/watch2.jpg' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                     <center>
+                        <h1>WATCH</h1>
+                     </center>
+                     <div class="tshirt_img"><img src="{% static 'images/electronics/watch.webp' %}"></div>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="{% url 'add_item' %}">Add</a></div>
+                        <div class="seemore_bt"><b>Rs 1000</b></div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- fashion section end -->
+
+               <!-- Javascript files-->
+               <script src="{% static 'js/jquery.min.js' %}"></script>
+               <script src="{% static 'js/popper.min.js' %}"></script>
+               <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+               <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+               <script src="{% static 'js/plugin.js' %}"></script>
+               <!-- sidebar -->
+               <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+               <script src="{% static 'js/custom.js' %}"></script>
+               <script>
+                  function openNav() {
+                     document.getElementById("mySidenav").style.width = "250px";
+                  }
+
+                  function closeNav() {
+                     document.getElementById("mySidenav").style.width = "0";
+                  }
+               </script>
+</body>
+
+</html>

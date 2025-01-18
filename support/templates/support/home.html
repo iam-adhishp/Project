@@ -1,0 +1,16 @@
+{% extends 'support/base.html' %}
+{% block content %}
+<div class="tickets-container">
+    <center><h2>ALL TICKETS</h2></center>
+    <ul class="tickets-list">
+        {% for ticket in tickets %}
+        <li class="ticket-item">
+            <strong>{{ ticket.subject }}</strong> - <span class="ticket-status">{{ ticket.status }}</span>
+            <span class="ticket-date">(Created on {{ ticket.created_at|date:"M d, Y" }})</span>
+        </li>
+        {% empty %}
+        <li class="no-tickets">No tickets available.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
