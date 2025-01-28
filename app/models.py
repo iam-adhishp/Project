@@ -23,5 +23,3 @@ class Item(models.Model):
     image6 = models.ImageField(upload_to='Product_images/', blank=True, null=True)
     def __str__(self):
         return self.name
-
-
