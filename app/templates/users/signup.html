@@ -89,13 +89,13 @@
 <body>
     <div class="signup-container">
         <h2>Sign Up</h2>
-        <!-- {% if messages %}
+        {% if messages %}
             <div class="messages">
                 {% for message in messages %}
                     <p>{{ message }}</p>
                 {% endfor %}
             </div>
-        {% endif %} -->
+        {% endif %}
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
