@@ -5,7 +5,8 @@ from django.contrib.auth.decorators import login_required
 from .models import Product
 from .models import Item
 from .forms import ProductForm
-from .forms import SignupForm
+# from .forms import SignupForm
+from django.contrib.auth.models import User
 
 def sample(request):
     return render(request, 'sample.html',)
@@ -40,19 +41,44 @@ def user_logout(request):
     logout(request)
     return redirect('login')
 
-def signup(request):
-    if request.method == 'POST':
-        form = SignupForm(request.POST)
+# def signup(request):
+#     if request.method == 'POST':
+#         form = SignupForm(request.POST)
         
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f'Account created for {username}!')
-            return redirect('login')  
-    else:
-        form = SignupForm()
-    return render(request, 'users/signup.html', {'form': form})
+#         if form.is_valid():
+#             form.save()
+#             username = form.cleaned_data.get('username')
+#             messages.success(request, f'Account created for {username}!')
+#             return redirect('login')  
+#     else:
+#         form = SignupForm()
+#     return render(request, 'users/signup.html', {'form': form})
 
+def new_register(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        confirm_password = request.POST['confirm_password']
+
+        if password != confirm_password:
+            messages.error(request, "Passwords do not match!")
+            return redirect('new_register')
+
+        if User.objects.filter(username=username).exists():
+            messages.error(request, "Username already taken!")
+            return redirect('new_register')
+
+        if User.objects.filter(email=email).exists():
+            messages.error(request, "Email already in use!")
+            return redirect('new_register')
+
+        user = User.objects.create_user(username=username, email=email, password=password)
+        user.save()
+        messages.success(request, "Registration successful! Please log in.")
+        return redirect('new_login')
+
+    return render(request, 'users/register.html')
 
 @login_required
 def add_item(request):
