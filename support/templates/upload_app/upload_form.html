@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Photo and Dress</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h2>Upload Your Photo and Dress</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        {{ dress_form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

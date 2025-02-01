@@ -7,3 +7,4 @@ urlpatterns = [
     path('try/', views.sampl, name='try'),
     path('sell/', views.bestsellers_list, name='bestsellers_list'),
 ]
+

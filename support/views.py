@@ -3,7 +3,6 @@ from .models import Ticket
 from .forms import TicketForm
 from support.models import BestSeller
 
-
 def cs(request):
     tickets = Ticket.objects.all()
     return render(request, 'support/home.html', {'tickets': tickets})
@@ -33,4 +32,6 @@ MAX_SEED = 10000
 
 
 def index(request):
-    return render(request, 'tryon_app/index.html')
+    return render(request, 'try/index.html')
+
+
