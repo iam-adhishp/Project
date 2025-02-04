@@ -6,5 +6,6 @@ urlpatterns = [
     path('create/', views.create_ticket, name='create_ticket'),
     path('try/', views.sampl, name='try'),
     path('sell/', views.bestsellers_list, name='bestsellers_list'),
+    path('upload-image/', views.upload_image, name='upload_image'),
 ]
 

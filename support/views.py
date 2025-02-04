@@ -3,6 +3,7 @@ from .models import Ticket
 from .forms import TicketForm
 from support.models import BestSeller
 
+
 def cs(request):
     tickets = Ticket.objects.all()
     return render(request, 'support/home.html', {'tickets': tickets})
@@ -35,3 +36,15 @@ def index(request):
     return render(request, 'try/index.html')
 
 
+from .forms import UserImageForm
+
+
+def upload_image(request):
+    if request.method == 'POST':
+        form = UserImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = UserImageForm()
+    return render(request, 'support/upload_image.html', {'form': form})

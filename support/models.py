@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Ticket(models.Model):
     STATUS_CHOICES = [
         ('open', 'Open'),
@@ -18,6 +19,7 @@ class Ticket(models.Model):
     def __str__(self):
         return self.subject
 
+
 class BestSeller(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
@@ -25,3 +27,21 @@ class BestSeller(models.Model):
     def __str__(self):
         return self.title
 
+
+class Product(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    image = models.ImageField(upload_to='products/')
+    category = models.CharField(max_length=50)  # e.g., glasses, dresses, shoes
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return self.name
+
+
+class UserImage(models.Model):
+    image = models.ImageField(upload_to='user_images/')
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Image {self.id}"

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    {% load static %}
+    <!-- fevicon -->
+    <link rel="icon" href="{% static 'images/grocery-store.png' %}" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        #user-image {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form p {
+            margin-bottom: 1rem;
+        }
+
+        form input[type="file"] {
+            margin-bottom: 1.5rem;
+            padding: 0.5rem;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        form input[type="file"]:hover {
+            border-color: #007bff;
+        }
+
+        form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Upload Your Image</h1>
+        <img id="user-image" src="{{ user_image_url }}" alt="User Image">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+
+</html>
