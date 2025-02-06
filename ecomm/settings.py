@@ -131,4 +131,4 @@ LOGIN_URL = '/login/'  # This should match the name of your login URL pattern
 # settings.py
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 # settings.py
-LOGIN_REDIRECT_URL = 'home'  # Redirect here after successful login
+

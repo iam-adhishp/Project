@@ -16,11 +16,11 @@ def home(request):
     query = request.GET.get('q', '')
     return render(request, 'index.html', {'query':query})
     
-@login_required
+# @login_required
 def fashion(request):
     return render(request, 'fashion.html',)
 
-@login_required
+# @login_required
 def wish(request):
     items = Product.objects.all()
     return render(request, 'add/wish.html', {'items':items})
@@ -35,10 +35,12 @@ def user_login(request):
             return redirect('home')  
         else:
             messages.error(request, 'Invalid username or password.')
+            return redirect('user_login')
     return render(request, 'login.html')
 
 def user_logout(request):
     logout(request)
+    messages.success(request, 'logged out')
     return redirect('login')
 
 def new_register(request):
@@ -63,11 +65,11 @@ def new_register(request):
         user = User.objects.create_user(username=username, email=email, password=password)
         user.save()
         messages.success(request, "Registration successful! Please log in.")
-        return redirect('new_login')
+        return redirect('user_login')
 
     return render(request, 'users/register.html')
 
-@login_required
+# @login_required
 def add_item(request):
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
@@ -78,18 +80,18 @@ def add_item(request):
         form = ProductForm()
     return render(request, 'add/add_item.html', {'form': form})
 
-@login_required
+# @login_required
 def view_items(request):
     items = Product.objects.all()
     return render(request, 'add/wish.html', {'items':items})
 
-@login_required
+# @login_required
 def search_view(request):
     query = request.GET.get('q', '')  
     results = Item.objects.filter(name__icontains=query) if query else []
     return render(request, 'search.html', {'query': query, 'results': results})
 
-@login_required
+# @login_required
 def map_view(request):
     return render(request, 'map_app/map.html')
 
