@@ -13,7 +13,13 @@ from .models import UserImage
 
 
 class UserImageForm(forms.ModelForm):
+    GENDER_CHOICES = [
+        ('M', 'Male'),
+        ('F', 'Female'),
+    ]
+    gender = forms.ChoiceField(choices=GENDER_CHOICES)
 
     class Meta:
         model = UserImage
-        fields = ['image']
+        fields = ['image','gender']
+

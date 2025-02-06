@@ -125,8 +125,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # settings.py
-LOGIN_URL = 'login'  # This should match the name of your login URL pattern
-LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/login/'  # This should match the name of your login URL pattern
+# LOGIN_REDIRECT_URL = '/'
 
 # settings.py
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'

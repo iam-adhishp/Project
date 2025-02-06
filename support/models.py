@@ -45,3 +45,17 @@ class UserImage(models.Model):
 
     def __str__(self):
         return f"Image {self.id}"
+
+
+class Person(models.Model):
+    GENDER_CHOICES = [
+        ('M', 'Male'),
+        ('F', 'Female'),
+    ]
+
+    name = models.CharField(max_length=100)
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    age = models.IntegerField()
+
+    def __str__(self):
+        return self.name

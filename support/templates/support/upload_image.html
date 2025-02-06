@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Image</title>
+    <title>ECOMMERCE</title>
     {% load static %}
     <!-- fevicon -->
     <link rel="icon" href="{% static 'images/grocery-store.png' %}" type="image/x-icon">
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
+            background: linear-gradient(135deg, #7d31ce 0%, #70ddd2  100%);
             margin: 0;
             padding: 0;
             display: flex;
@@ -34,6 +34,7 @@
             color: #333;
             margin-bottom: 1.5rem;
             font-size: 2rem;
+            text-transform: uppercase;
         }
 
         #user-image {
@@ -84,7 +85,7 @@
 
 <body>
     <div class="container">
-        <h1>Upload Your Image</h1>
+        <h1>UPLOAD HERE</h1>
         <img id="user-image" src="{{ user_image_url }}" alt="User Image">
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}

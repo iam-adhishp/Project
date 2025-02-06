@@ -41,19 +41,6 @@ def user_logout(request):
     logout(request)
     return redirect('login')
 
-# def signup(request):
-#     if request.method == 'POST':
-#         form = SignupForm(request.POST)
-        
-#         if form.is_valid():
-#             form.save()
-#             username = form.cleaned_data.get('username')
-#             messages.success(request, f'Account created for {username}!')
-#             return redirect('login')  
-#     else:
-#         form = SignupForm()
-#     return render(request, 'users/signup.html', {'form': form})
-
 def new_register(request):
     if request.method == 'POST':
         username = request.POST['username']
