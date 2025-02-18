@@ -35,7 +35,7 @@ def user_login(request):
             return redirect('home')  
         else:
             messages.error(request, 'Invalid username or password.')
-            return redirect('user_login')
+            return redirect('login')
     return render(request, 'login.html')
 
 def user_logout(request):
@@ -94,5 +94,4 @@ def search_view(request):
 # @login_required
 def map_view(request):
     return render(request, 'map_app/map.html')
-
 

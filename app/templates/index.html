@@ -58,9 +58,9 @@
                   <div class="custom_menu">
                      <ul>
                         <li><a href="{% url 'sell' %}">BEST SELLERS</a></li>
-                        <li><a href="{% url 'home' %}">GIFT IDEAS</a></li>
-                        <li><a href="{% url 'home' %}">NEW RELEASES</a></li>
-                        <li><a href="{% url 'home' %}">TODAYS DEALS</a></li>
+                        <li><a href="" onclick="showAlert()">GIFT IDEAS</a></li>
+                        <li><a href="" onclick="showAlert()">NEW RELEASES</a></li>
+                        <li><a href="" onclick="showAlert()">TODAYS DEALS</a></li>
                         <li><a href="{% url 'cs' %}">CUSTOMER SERVICE</a></li>
                      </ul>
                   </div>
@@ -297,6 +297,12 @@
             });
       });
    </script> -->
+
+   <script>
+      function showAlert() {
+          alert("COMMING SOON.....");
+      }
+  </script>
 </body>
 
 </html>
