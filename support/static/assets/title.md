@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <div>
     <div style="display: flex; justify-content: center; align-items: center; text-align: center; font-size: 40px;">
       <b>Kolors Virtual Try-On in the Wild</b>
@@ -14,4 +14,4 @@
       <strong>Disclaimer: </strong>The Kolors-Virtual-Try-On Demo on HuggingFace space is free for trials. Any solicitation for payment based on the free features we provide on HuggingFace Space is a fraudulent act. Beware of scams and do not fall victim to deceit.
     </div>
   </div>
-</div>
+</div> -->
